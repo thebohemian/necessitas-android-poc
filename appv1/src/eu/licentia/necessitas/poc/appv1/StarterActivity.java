@@ -9,6 +9,8 @@ import android.os.Bundle;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+import android.view.View;
+import android.widget.Button;
 import android.widget.EditText;
 import dalvik.system.DexClassLoader;
 import eu.licentia.necessitas.poc.ministro.ICallback1;
@@ -27,6 +29,8 @@ public class StarterActivity extends Activity {
 	IMinistroService ministroService;
 
 	static EditText log;
+	
+	Button startButton;
 
 	static Loader1 loader;
 
@@ -51,6 +55,15 @@ public class StarterActivity extends Activity {
 		setContentView(R.layout.main);
 
 		log = (EditText) findViewById(R.id.log);
+		startButton = (Button) findViewById(R.id.startButton);
+		startButton.setOnClickListener(new View.OnClickListener() {
+			
+			@Override
+			public void onClick(View v) {
+				startApplication();
+			}
+		});
+		
 		bindService(new Intent(IMinistroService.class.getName()), connection,
 				Context.BIND_AUTO_CREATE);
 	}
@@ -99,13 +112,26 @@ public class StarterActivity extends Activity {
 			
 			log("loader acquired: " + loader);
 
-			Intent i = new Intent(StarterActivity.this, Appv1Activity.class);
-			startActivity(i);
+			if (loader == null)
+			{
+				startButton.setText("Close");
+			}
 			
-			// We're done.
-			//finish();
+			startButton.setEnabled(true);
 		}
 	};
+	
+	void startApplication() {
+		if (loader != null)
+		{
+			Intent i = new Intent(StarterActivity.this, Appv1Activity.class);
+			startActivity(i);
+		}
+		
+		// We're done.
+		finish();
+	}
+
 
 	Loader1 createLoaderInstance(String path, String className) {
 		try {
