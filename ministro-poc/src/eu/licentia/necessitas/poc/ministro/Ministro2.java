@@ -2,9 +2,11 @@ package eu.licentia.necessitas.poc.ministro;
 
 import android.app.Service;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
+import android.widget.Button;
 import android.widget.EditText;
 
 public class Ministro2 extends Service {
@@ -12,16 +14,34 @@ public class Ministro2 extends Service {
 	private static final String TAG = "Ministro2";
 
 	private static final int SUPPORTED_MINISTRO_LEVEL = 1;
-	
-	private EditText log;
-	
+
 	static Ministro2 instance;
 	
-	public Ministro2() {
+	private LoaderStore store;
+	
+	private EditText log;
+
+	static {
+        //System.loadLibrary("helper");
+    }
+
+    public Ministro2() {
 		Log.i(TAG, "service started");
 		instance = this;
 	}
 	
+	@Override
+	public void onCreate() {
+		super.onCreate();
+
+		Resources r = getResources();
+		store = new LoaderStore(r, getFilesDir());
+		
+		String loaderFiles[] = r.getStringArray(R.array.loaderFiles);
+		String loaderClassNames[] = r.getStringArray(R.array.loaderClassNames);
+		store.init(loaderFiles, loaderClassNames);
+	}
+
 	static Ministro2 instance() {
 		return instance;
 	}
@@ -30,27 +50,28 @@ public class Ministro2 extends Service {
 	public IBinder onBind(Intent intent) {
 		return service;
 	}
-	
+
 	void setEditText(EditText l) {
 		this.log = l;
 	}
-	
+
 	void log(String msg) {
 		if (log != null) {
 			log.append(msg);
 			log.append("\n");
 		}
+		
 	}
 
 	private IMinistroService.Stub service = new IMinistroService.Stub() {
-
+		
 		@Override
 		public boolean checkCompatibility(int ministroLevel)
 				throws RemoteException {
-			log("checkCompatibility(" + ministroLevel + ");");
-			
-			return ministroLevel > 0
+			boolean result = ministroLevel > 0
 					&& ministroLevel <= SUPPORTED_MINISTRO_LEVEL;
+			log("checkCompatibility(" + ministroLevel + ") = " + result);
+			return result;
 		}
 
 		@Override
@@ -59,20 +80,21 @@ public class Ministro2 extends Service {
 			log("required Loader level: " + callback.getRequiredLoaderLevel());
 
 			Result r = new Result();
-			
-			switch (callback.getRequiredLoaderLevel())
+
+			int level = callback.getRequiredLoaderLevel();
+			LoaderInfo info = store.getLoaderInfo(level);
+			if (info != null) {
+				r.loaderPath = info.path;
+				r.loaderClassName = info.loaderClassName;
+				r.success = true;
+			} else
 			{
-				case 1:
-					r.loaderPath = "/data/local/loader.apk";
-					r.loaderClassName = "eu.licentia.necessitas.ministro.loader1.Loader1Impl";
-					r.success = true;
-					break;
-				default:
-					r.success = false;
+				r.success = false;
 			}
-			
+
 			callback.finished(r);
 		}
 	};
 
+	native static int makeWorldReadable(String filepath);
 }

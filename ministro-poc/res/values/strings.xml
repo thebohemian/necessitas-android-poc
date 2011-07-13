@@ -2,4 +2,10 @@
 <resources>
     <string name="hello">Hello World, MinistroPoCActivity!</string>
     <string name="app_name">MinistroPoC</string>
+    <string-array name="loaderClassNames">
+        <item>eu.licentia.necessitas.ministro.loader1.Loader1Impl</item>
+    </string-array>
+    <string-array name="loaderFiles">
+        <item>loader</item>
+    </string-array>
 </resources>
