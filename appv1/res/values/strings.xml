@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">Appv1</string>
+    <string name="note">Started App activity</string>
+    <string name="starter_name">Appv1 Starter</string>
+</resources>

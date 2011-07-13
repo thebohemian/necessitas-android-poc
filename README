@@ -1,0 +1,19 @@
+This is an implementation of the ideas presented here:
+
+http://community.kde.org/Necessitas/Java/Redesign
+
+It is a Proof Of Concept as real Android application.
+
+The idea of this PoC is to proof the idea, find flaws in the thoughts and
+improve the final design of the implementation.
+
+2011-07-13
+
+Robert Schuster
+r.schuster@tarent.de
+
+---
+
+The code is licensed unter the MIT, GNU LGPL 2.1 (or later) and the
+GNU GPL v3 (or later) license.
+
