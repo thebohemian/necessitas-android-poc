@@ -17,8 +17,8 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
-import eu.licentia.necessitas.poc.ministro.ActivityDelegate4;
-import eu.licentia.necessitas.poc.ministro.Loader1;
+import eu.licentia.necessitas.poc.loader1.ActivityDelegate4;
+import eu.licentia.necessitas.poc.loader1.Loader1;
 
 public class Appv1Activity extends Activity {
 

@@ -13,10 +13,10 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
 import dalvik.system.DexClassLoader;
+import eu.licentia.necessitas.poc.loader1.Loader1;
 import eu.licentia.necessitas.poc.ministro.ICallback1;
 import eu.licentia.necessitas.poc.ministro.IMinistroService;
 import eu.licentia.necessitas.poc.ministro.IResult;
-import eu.licentia.necessitas.poc.ministro.Loader1;
 
 public class StarterActivity extends Activity {
 
