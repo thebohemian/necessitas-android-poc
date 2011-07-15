@@ -2,7 +2,7 @@
 <resources>
     <string name="app_name">MinistroPoC</string>
     <string-array name="loaderClassNames">
-        <item>eu.licentia.necessitas.poc.loader1.Loader1Impl</item>
+        <item>eu.licentia.necessitas.loader1.Loader1Impl</item>
     </string-array>
     <string-array name="loaderFiles">
         <item>loader</item>
