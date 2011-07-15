@@ -1,0 +1,2 @@
+Interface classes for the Loader. The classes need to be available in the APK of each application
+*but* the Loader implementation itself *must* not contain them.
