@@ -13,10 +13,10 @@ import android.os.RemoteException;
 import android.util.Log;
 import dalvik.system.DexClassLoader;
 import eu.licentia.necessitas.poc.appv1.R;
+import eu.licentia.necessitas.poc.loader1.Loader1;
 import eu.licentia.necessitas.poc.ministro.ICallback1;
 import eu.licentia.necessitas.poc.ministro.IMinistroService;
 import eu.licentia.necessitas.poc.ministro.IResult;
-import eu.licentia.necessitas.poc.ministro.Loader1;
 
 /**
  * Minimal starter that interacts with the Ministro service to do application
@@ -32,7 +32,7 @@ public class StarterActivity extends Activity {
 
 	static final String BUILTIN_LOADER_PATH = "/data/local/qt/loader/loader.apk";
 
-	static final String BUILTIN_LOADER_CLASSNAME = "eu.licentia.necessitas.ministro.loader1.Loader1Impl";
+	static final String BUILTIN_LOADER_CLASSNAME = "eu.licentia.necessitas.poc.loader1.Loader1Impl";
 
 	private static final String TAG = "Starter4";
 

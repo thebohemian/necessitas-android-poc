@@ -1,4 +1,4 @@
-package eu.licentia.necessitas.poc.ministro;
+package eu.licentia.necessitas.poc.loader1;
 
 import android.app.Activity;
 
