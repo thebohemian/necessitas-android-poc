@@ -1,0 +1,5 @@
+Minimal implementation of the application starter.
+
+It can work with Ministro (the service tells where the Loader is) or standalone (a certain hardcoded path)
+is being used).
+
