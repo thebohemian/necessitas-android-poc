@@ -1,0 +1,8 @@
+In order to properly build this project one needs to have the SDK and NDK
+installed. Run the following commands to create the shared libraries:
+
+android update project -p . -s
+<ndk_root>/ndk-build
+
+If the first command fails because it asks for a target then you need to
+install the android-4 target.
