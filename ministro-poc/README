@@ -1,3 +1,8 @@
+Simple Proof-Of-Concept implementation of Ministro. It uses a multiline textfield to display the arguments of
+applications calling the service. It contains a very simple database for different Loader implementations
+that can be extended using res/strings.xml values. This shows that Ministro's code is independent from that
+of the Loader's - which is good. :) 
+
 In order to properly build this project one needs to have the SDK and NDK
 installed. Run the following commands to create the shared libraries:
 
