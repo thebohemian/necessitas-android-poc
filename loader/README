@@ -4,3 +4,8 @@ on the classpath because it contains the interfaces to compile against.
 However at runtime the APK is not allowed to contain those interfaces.
 
 Instead they need to be part of the calling application.
+
+-
+
+When the Loader is compiled its APK need to be copied into the res/raw directory of
+the Ministro PoC.
