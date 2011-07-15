@@ -22,8 +22,6 @@ import eu.licentia.necessitas.poc.ministro.Loader1;
 
 public class AppTemplate extends Activity {
 
-	public static final String NAME = "App";
-	
 	Loader1 loader;
 	ActivityDelegate4 delegate;
 

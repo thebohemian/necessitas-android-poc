@@ -78,7 +78,7 @@ public class StarterActivity extends Activity {
 
 		@Override
 		public String getApplicationName() throws RemoteException {
-			return AppTemplate.NAME;
+			return getResources().getString(R.string.app_name);
 		}
 
 		@Override

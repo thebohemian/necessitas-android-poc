@@ -6,10 +6,10 @@
     <uses-sdk android:minSdkVersion="4" />
 
     <application android:icon="@drawable/icon" android:label="@string/app_name">
-        <activity android:name="StarterActivity" android:label="@string/starter_name">
+        <activity android:name="StarterActivity" android:label="@string/app_name">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
+                <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
         <activity android:name=".AppTemplate" android:label="@string/app_name">
