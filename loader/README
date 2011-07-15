@@ -1,0 +1,6 @@
+Implementation of the Loader. It needs to have the loader-interface project
+on the classpath because it contains the interfaces to compile against.
+
+However at runtime the APK is not allowed to contain those interfaces.
+
+Instead they need to be part of the calling application.
