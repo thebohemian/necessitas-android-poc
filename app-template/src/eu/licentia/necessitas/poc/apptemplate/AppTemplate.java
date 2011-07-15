@@ -1,4 +1,4 @@
-package eu.licentia.necessitas.poc.appv1;
+package eu.licentia.necessitas.poc.apptemplate;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager;
+import eu.licentia.necessitas.poc.appv1.R;
 import eu.licentia.necessitas.poc.ministro.ActivityDelegate4;
 import eu.licentia.necessitas.poc.ministro.Loader1;
 

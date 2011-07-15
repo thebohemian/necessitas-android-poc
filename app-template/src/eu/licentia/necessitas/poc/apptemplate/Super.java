@@ -1,4 +1,4 @@
-package eu.licentia.necessitas.poc.appv1;
+package eu.licentia.necessitas.poc.apptemplate;
 
 import android.app.Activity;
 import android.app.Dialog;

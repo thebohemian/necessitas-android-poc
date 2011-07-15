@@ -1,4 +1,4 @@
-package eu.licentia.necessitas.poc.appv1;
+package eu.licentia.necessitas.poc.apptemplate;
 
 import java.util.concurrent.atomic.AtomicBoolean;
 
@@ -12,6 +12,7 @@ import android.os.IBinder;
 import android.os.RemoteException;
 import android.util.Log;
 import dalvik.system.DexClassLoader;
+import eu.licentia.necessitas.poc.appv1.R;
 import eu.licentia.necessitas.poc.ministro.ICallback1;
 import eu.licentia.necessitas.poc.ministro.IMinistroService;
 import eu.licentia.necessitas.poc.ministro.IResult;

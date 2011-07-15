@@ -12,9 +12,9 @@
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
-        <activity android:name=".AppTemplate" android:label="@string/app_name">
+        <activity android:name="eu.licentia.necessitas.poc.apptemplate.AppTemplate" android:label="@string/app_name">
             <intent-filter>
-                <action android:name="eu.licentia.necessitas.poc.appv1.Appv1Activity"></action>
+                <action android:name="eu.licentia.necessitas.poc.apptemplate.AppTemplate"></action>
                 <category android:name="android.intent.category.LAUNCHER"></category>
             </intent-filter>
         </activity>
