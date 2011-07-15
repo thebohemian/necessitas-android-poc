@@ -32,7 +32,7 @@ public class StarterActivity extends Activity {
 
 	static final String BUILTIN_LOADER_PATH = "/data/local/qt/loader/loader.apk";
 
-	static final String BUILTIN_LOADER_CLASSNAME = "eu.licentia.necessitas.poc.loader1.Loader1Impl";
+	static final String BUILTIN_LOADER_CLASSNAME = "eu.licentia.necessitas.loader1.Loader1Impl";
 
 	private static final String TAG = "Starter4";
 
