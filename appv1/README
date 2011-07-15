@@ -1,0 +1,5 @@
+Verbose example of the Application starter code.
+
+The Starter activity contains a multine textfield to which is posts the progress of the startup. Of course,
+in a real application one would not want to see such messages. However for a better understanding of the
+startup process this implementation is helpful.
