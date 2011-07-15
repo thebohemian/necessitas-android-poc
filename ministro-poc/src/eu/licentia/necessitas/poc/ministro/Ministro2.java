@@ -5,8 +5,6 @@ import android.content.Intent;
 import android.content.res.Resources;
 import android.os.IBinder;
 import android.os.RemoteException;
-import android.util.Log;
-import android.widget.Button;
 import android.widget.EditText;
 
 public class Ministro2 extends Service {
@@ -22,11 +20,10 @@ public class Ministro2 extends Service {
 	private EditText log;
 
 	static {
-        //System.loadLibrary("helper");
+        System.loadLibrary("helper");
     }
 
     public Ministro2() {
-		Log.i(TAG, "service started");
 		instance = this;
 	}
 	
