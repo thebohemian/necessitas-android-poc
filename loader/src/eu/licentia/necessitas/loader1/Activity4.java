@@ -1,4 +1,4 @@
-package eu.licentia.necessitas.ministro.loader1;
+package eu.licentia.necessitas.loader1;
 
 import android.app.Activity;
 import android.app.Dialog;
@@ -18,7 +18,7 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.WindowManager.LayoutParams;
-import eu.licentia.necessitas.poc.ministro.ActivityDelegate4;
+import eu.licentia.necessitas.poc.loader1.ActivityDelegate4;
 
 class Activity4 implements ActivityDelegate4 {
 	

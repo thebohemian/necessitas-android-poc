@@ -3,6 +3,6 @@
 	<classpathentry kind="src" path="src"/>
 	<classpathentry kind="src" path="gen"/>
 	<classpathentry kind="con" path="com.android.ide.eclipse.adt.ANDROID_FRAMEWORK"/>
-	<classpathentry combineaccessrules="false" kind="src" path="/ministro-poc"/>
+	<classpathentry combineaccessrules="false" kind="src" path="/loader-interface"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,8 +1,8 @@
-package eu.licentia.necessitas.ministro.loader1;
+package eu.licentia.necessitas.loader1;
 
 import android.app.Activity;
-import eu.licentia.necessitas.poc.ministro.ActivityDelegate4;
-import eu.licentia.necessitas.poc.ministro.Loader1;
+import eu.licentia.necessitas.poc.loader1.ActivityDelegate4;
+import eu.licentia.necessitas.poc.loader1.Loader1;
 
 public class Loader1Impl implements Loader1 {
 	
